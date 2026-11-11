@@ -1,0 +1,26 @@
+{
+  "name": "opportunityloop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpportunityLoop — Explainable Student Opportunity & Participation Hub",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n API,WEB -c blue,green \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "dev:memory": "concurrently -n API,WEB -c blue,green \"npm --prefix server run dev:memory\" \"npm --prefix client run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server run start",
+    "test": "npm --prefix server test && npm --prefix client test",
+    "test:server": "npm --prefix server test",
+    "test:client": "npm --prefix client test",
+    "seed": "npm --prefix server run seed",
+    "seed:reset": "npm --prefix server run seed:reset",
+    "evaluate:recs": "npm --prefix server run evaluate:recs",
+    "lint": "npm --prefix server run lint && npm --prefix client run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
